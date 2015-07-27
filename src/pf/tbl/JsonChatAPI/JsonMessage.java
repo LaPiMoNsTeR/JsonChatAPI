@@ -1,5 +1,16 @@
 package pf.tbl.JsonChatAPI;
 
+// ----- for 1.8
+//import net.minecraft.server.v1_8_R1.IChatBaseComponent;
+//import net.minecraft.server.v1_8_R1.IChatBaseComponent.ChatSerializer;
+//import net.minecraft.server.v1_8_R1.PacketPlayOutChat;
+
+// ----- for 1.8.3
+//import net.minecraft.server.v1_8_R2.IChatBaseComponent;
+//import net.minecraft.server.v1_8_R2.IChatBaseComponent.ChatSerializer;
+//import net.minecraft.server.v1_8_R2.PacketPlayOutChat;
+
+// ----- for 1.8.4+
 import net.minecraft.server.v1_8_R3.IChatBaseComponent;
 import net.minecraft.server.v1_8_R3.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
