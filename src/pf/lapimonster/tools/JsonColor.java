@@ -1,7 +1,7 @@
-package pf.tbl.JsonChatAPI.outils;
+package pf.lapimonster.tools;
 
-public enum JsonColor {
-
+public enum JsonColor 
+{
 	BLACK("black"),
 	DARK_BLUE("dark_blue"),
 	DARK_GREEN("dark_green"),
@@ -19,12 +19,15 @@ public enum JsonColor {
 	YELLOW("yellow"),
 	WHITE("white");
 	
-	String name;
+	private String name;
 	
-	private JsonColor(String name) {
+	private JsonColor(String name) 
+	{
 		this.name = name;
 	}
 	
-	public String work() { return this.name; }
-	
+	public String work() 
+	{ 
+		return this.name; 
+	}
 }

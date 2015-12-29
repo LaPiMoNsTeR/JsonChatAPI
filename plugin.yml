@@ -1,4 +1,8 @@
 name: JsonChatAPI
 version: 1.1.2
 author: LaPiMoNsTeR
-main: pf.tbl.JsonChatAPI.Main
+main: pf.lapimonster.JsonChatAPI
+commands:
+  test:
+    description: Make test
+    usage: /test
