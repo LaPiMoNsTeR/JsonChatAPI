@@ -64,7 +64,7 @@ public class JsonExtra
 	public Object work() 
 	{
 		this.extra = this.extra.substring(0, this.extra.length()-2);
-		String extra = "{text: '', extra: [{"+this.extra+"}]}";
+		String extra = "{text: \"\", extra: [{"+this.extra+"}]}";
 		
 		Object cbc = null;
 		try 

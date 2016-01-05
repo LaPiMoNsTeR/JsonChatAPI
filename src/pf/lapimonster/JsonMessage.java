@@ -1,14 +1,14 @@
 package pf.lapimonster;
 
-import pf.lapimonster.tools.JsonColor;
-import pf.lapimonster.tools.JsonFormat;
-import pf.lapimonster.tools.JsonPosition;
-import pf.lapimonster.utils.NMSUtils;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+
+import pf.lapimonster.tools.JsonColor;
+import pf.lapimonster.tools.JsonFormat;
+import pf.lapimonster.tools.JsonPosition;
+import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
 
 public class JsonMessage 
 {
@@ -20,7 +20,7 @@ public class JsonMessage
 	{
 		try 
 		{
-			this.base = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: ''}");
+			this.base = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \"\"}");
 			this.position = position.work();
 		} 
 		catch (SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException e) 
@@ -33,7 +33,7 @@ public class JsonMessage
 	{
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"'}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\"}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getIChatBaseComponentClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
@@ -48,7 +48,7 @@ public class JsonMessage
 	{
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"', color:'"+color.work()+"'}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\", color:\""+color.work()+"\"}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getIChatBaseComponentClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
@@ -63,7 +63,7 @@ public class JsonMessage
 	{
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"', "+format.work()+": true}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\", "+format.work()+": true}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getIChatBaseComponentClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
@@ -82,7 +82,7 @@ public class JsonMessage
 		
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"', "+format+"}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\", "+format+"}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getIChatBaseComponentClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
@@ -97,7 +97,7 @@ public class JsonMessage
 	{
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"', color: '"+color.toString()+"', "+format.work()+": true}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\", color: \""+color.toString()+"\", "+format.work()+": true}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getChatSerializerClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
@@ -116,7 +116,7 @@ public class JsonMessage
 		
 		try 
 		{
-			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: '"+text+"', "+format+", color: '"+color.work()+"'}");
+			this.u = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, "{text: \""+text+"\", "+format+", color: \""+color.work()+"\"}");
 			this.base.getClass().getMethod("addSibling", JsonChatAPI.getInstance().getIChatBaseComponentClass()).invoke(this.base, this.u);
 		} 
 		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException

@@ -1,4 +1,4 @@
-package pf.lapimonster.utils;
+package pf.lapimonster.utils.JsonChatAPI;
 
 import java.lang.reflect.InvocationTargetException;
 

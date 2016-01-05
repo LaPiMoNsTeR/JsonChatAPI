@@ -2,7 +2,7 @@ package pf.lapimonster;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import pf.lapimonster.utils.NMSUtils;
+import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
 
 public class JsonChatAPI extends JavaPlugin 
 { 

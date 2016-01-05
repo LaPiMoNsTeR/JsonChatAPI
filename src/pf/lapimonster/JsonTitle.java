@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-import pf.lapimonster.utils.NMSUtils;
+import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
 
 public class JsonTitle 
 {
@@ -117,7 +117,7 @@ public class JsonTitle
 					pConnection.getClass().getMethod("sendPacket", JsonChatAPI.getInstance().getPacketClass()).invoke(pConnection, packet);
 
 				Object serialized = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class)
-										.invoke(null, "{text:'"+ChatColor.translateAlternateColorCodes('&', title)+"',color:"+titleColor.name().toLowerCase()+"}");
+										.invoke(null, "{text:\""+ChatColor.translateAlternateColorCodes('&', title)+"\",color:"+titleColor.name().toLowerCase()+"}");
 
 				packet = JsonChatAPI.getInstance().getTitleClass().getConstructor(JsonChatAPI.getInstance().getTitleActionClass(),
 						JsonChatAPI.getInstance().getIChatBaseComponentClass()).newInstance(actions[0], serialized);
@@ -126,7 +126,7 @@ public class JsonTitle
 				if (this.subtitle != "") 
 				{
 					serialized = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class)
-							.invoke(null, "{text:'"+ChatColor.translateAlternateColorCodes('&', subtitle)+"',color:"+subtitleColor.name().toLowerCase() + "}");
+							.invoke(null, "{text:\""+ChatColor.translateAlternateColorCodes('&', subtitle)+"\",color:"+subtitleColor.name().toLowerCase() + "}");
 					packet = JsonChatAPI.getInstance().getTitleClass().getConstructor(
 																						JsonChatAPI.getInstance().getTitleActionClass(), 
 																						JsonChatAPI.getInstance().getIChatBaseComponentClass()).newInstance(actions[1],
