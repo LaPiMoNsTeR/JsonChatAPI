@@ -1,8 +1,8 @@
-package pf.lapimonster;
+package pf.lapimonster.JsonChatAPI;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
+import pf.lapimonster.JsonChatAPI.utils.NMSUtils;
 
 public class JsonChatAPI extends JavaPlugin 
 { 

@@ -1,4 +1,4 @@
-package pf.lapimonster.tools;
+package pf.lapimonster.JsonChatAPI.tools;
 
 public enum JsonFormat 
 {

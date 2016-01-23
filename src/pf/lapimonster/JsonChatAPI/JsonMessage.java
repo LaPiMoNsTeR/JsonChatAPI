@@ -1,14 +1,14 @@
-package pf.lapimonster;
+package pf.lapimonster.JsonChatAPI;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import pf.lapimonster.tools.JsonColor;
-import pf.lapimonster.tools.JsonFormat;
-import pf.lapimonster.tools.JsonPosition;
-import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
+import pf.lapimonster.JsonChatAPI.tools.JsonColor;
+import pf.lapimonster.JsonChatAPI.tools.JsonFormat;
+import pf.lapimonster.JsonChatAPI.tools.JsonPosition;
+import pf.lapimonster.JsonChatAPI.utils.NMSUtils;
 
 public class JsonMessage 
 {

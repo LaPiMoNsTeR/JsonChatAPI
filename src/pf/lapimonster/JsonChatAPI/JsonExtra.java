@@ -1,11 +1,11 @@
-package pf.lapimonster;
+package pf.lapimonster.JsonChatAPI;
 
 import java.lang.reflect.InvocationTargetException;
 
-import pf.lapimonster.tools.JsonClickEventType;
-import pf.lapimonster.tools.JsonColor;
-import pf.lapimonster.tools.JsonFormat;
-import pf.lapimonster.tools.JsonHoverEventType;
+import pf.lapimonster.JsonChatAPI.tools.JsonClickEventType;
+import pf.lapimonster.JsonChatAPI.tools.JsonColor;
+import pf.lapimonster.JsonChatAPI.tools.JsonFormat;
+import pf.lapimonster.JsonChatAPI.tools.JsonHoverEventType;
 
 
 public class JsonExtra 

@@ -1,10 +1,10 @@
-package pf.lapimonster;
+package pf.lapimonster.JsonChatAPI;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-import pf.lapimonster.utils.JsonChatAPI.NMSUtils;
+import pf.lapimonster.JsonChatAPI.utils.NMSUtils;
 
 public class JsonTitle 
 {
