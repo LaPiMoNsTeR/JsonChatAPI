@@ -1,5 +1,7 @@
 package pf.lapimonster.JsonChatAPI;
 
+import java.io.IOException;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 import pf.lapimonster.JsonChatAPI.utils.NMSUtils;
@@ -22,6 +24,8 @@ public class JsonChatAPI extends JavaPlugin
 		
 		try 
 		{
+			new Updater();
+			
 			this.iChatBaseComponentClass = NMSUtils.getNMS("IChatBaseComponent");
 			this.chatSerializerClass = NMSUtils.getNMS(this.iChatBaseComponentClass.getDeclaredClasses(), "ChatSerializer");
 			this.packetPlayOutChatClass = NMSUtils.getNMS("PacketPlayOutChat");
@@ -29,7 +33,7 @@ public class JsonChatAPI extends JavaPlugin
 			this.titleClass = NMSUtils.getNMS("PacketPlayOutTitle");
 			this.actionsClass = NMSUtils.getNMS("PacketPlayOutTitle$EnumTitleAction");
 		} 
-		catch (ClassNotFoundException e) 
+		catch (ClassNotFoundException | IOException e) 
 		{
 			e.printStackTrace();
 		}

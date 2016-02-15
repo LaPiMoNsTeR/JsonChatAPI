@@ -127,7 +127,7 @@ public class JsonMessage
 		return this;
 	}
 	
-	public JsonMessage extra(Object JsonExtra) 
+	public JsonMessage extra(String JsonExtra) 
 	{
 		try 
 		{

@@ -1,7 +1,5 @@
 package pf.lapimonster.JsonChatAPI;
 
-import java.lang.reflect.InvocationTargetException;
-
 import pf.lapimonster.JsonChatAPI.tools.JsonClickEventType;
 import pf.lapimonster.JsonChatAPI.tools.JsonColor;
 import pf.lapimonster.JsonChatAPI.tools.JsonFormat;
@@ -61,22 +59,23 @@ public class JsonExtra
 		return this;
 	}
 	
-	public Object work() 
+	public String work() 
 	{
 		this.extra = this.extra.substring(0, this.extra.length()-2);
 		String extra = "{text: \"\", extra: [{"+this.extra+"}]}";
 		
+		return extra;
+		/*
 		Object cbc = null;
 		try 
 		{
 			cbc = JsonChatAPI.getInstance().getChatSerializerClass().getMethod("a", String.class).invoke(null, extra);
 		} 
-		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-				| SecurityException e) 
+		catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) 
 		{
 			e.printStackTrace();
 		}
-		return cbc;
+		return cbc;*/
 	}
 	
 }
